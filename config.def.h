@@ -124,15 +124,15 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_exclam,                  0)
+	TAGKEYS(                        XK_at,                      1)
+	TAGKEYS(                        XK_numbersign,              2)
+	TAGKEYS(                        XK_dollar,                  3)
+	TAGKEYS(                        XK_percent,                 4)
+	TAGKEYS(                        XK_asciicircum,             5)
+	TAGKEYS(                        XK_ampersand,               6)
+	TAGKEYS(                        XK_asterisk,                7)
+	TAGKEYS(                        XK_parenleft,               8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     { MODKEY,                       XK_Escape, spawn,          {.v = logoutcmd} },
 };
