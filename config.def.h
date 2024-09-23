@@ -86,12 +86,18 @@ static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL }
 static const char *volupcmd[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *voldowncmd[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 
+// System
+static const char *logoutcmd[] = { "loginctl", "lock-session", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
     
     // Audio
     { 0,                   XF86XK_AudioMute,   spawn,          {.v = mutecmd } },
+    { 0,                   XF86XK_AudioMute,   spawn,          {.v = mutecmd } },
     { 0,            XF86XK_AudioLowerVolume,   spawn,          {.v = voldowncmd } },
+    { 0,            XF86XK_AudioLowerVolume,   spawn,          {.v = voldowncmd } },
+    { 0,            XF86XK_AudioRaiseVolume,   spawn,          {.v = volupcmd } },
     { 0,            XF86XK_AudioRaiseVolume,   spawn,          {.v = volupcmd } },
 
     // Window manager
@@ -128,6 +134,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    { MODKEY,                       XK_Escape, spawn,          {.v = logoutcmd} },
 };
 
 /* button definitions */
