@@ -24,7 +24,7 @@ static const char *colors[][3]  = {
   [SchemeStatus]     = { fg1, bg0,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
   [SchemeTagsSel]    = { bg1, red,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
   [SchemeTagsNorm]   = { fg1, bg0,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-  [SchemeInfoSel]    = { bg1, red,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+  [SchemeInfoSel]    = { fg1, bg0,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
   [SchemeInfoNorm]   = { fg1, bg0,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 
   //[SchemeTag]        = { bg0, bg1, bg0 },
