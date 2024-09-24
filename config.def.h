@@ -21,6 +21,12 @@ static const char *colors[][3]  = {
   /*                     fg   bg   border */
   [SchemeNorm]       = { fg1, bg0, fg2 },
   [SchemeSel]        = { bg1, red, bluu },
+  [SchemeStatus]     = { fg1, bg0,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+  [SchemeTagsSel]    = { bg1, red,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+  [SchemeTagsNorm]   = { fg1, bg0,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+  [SchemeInfoSel]    = { bg1, red,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+  [SchemeInfoNorm]   = { fg1, bg0,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+
   //[SchemeTag]        = { bg0, bg1, bg0 },
   //[SchemeTag1]       = { rose, bg0,  bg1 },
   //[SchemeTag2]       = { red, bg0, bg1 },
