@@ -20,9 +20,9 @@ static const char col_cyan[]        = "#005577";
 static const char *colors[][3]  = {
   /*                     fg   bg   border */
   [SchemeNorm]       = { fg1, bg0, fg2 },
-  [SchemeSel]        = { bg1, red, bluu },
+  [SchemeSel]        = { bg1, yellow, bluu },
   [SchemeStatus]     = { fg1, bg0,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-  [SchemeTagsSel]    = { bg1, red,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+  [SchemeTagsSel]    = { bg1, yellow,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
   [SchemeTagsNorm]   = { fg1, bg0,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
   [SchemeInfoSel]    = { fg1, bg0,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
   [SchemeInfoNorm]   = { fg1, bg0,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
@@ -84,7 +84,7 @@ static const Layout layouts[] = {
 /* commands */
 // Programs
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", bg0, "-nf", fg1, "-sb", yellow, "-sf", bg0, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 // Volume
