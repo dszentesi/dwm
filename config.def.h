@@ -86,6 +86,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", bg0, "-nf", fg1, "-sb", yellow, "-sf", bg0, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char *volnotifcmd[] = { "~/.config/bin/volume-notification", NULL };
 
 // Volume
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
@@ -100,11 +101,11 @@ static const Key keys[] = {
     
     // Audio
     { 0,                   XF86XK_AudioMute,   spawn,          {.v = mutecmd } },
-    { 0,                   XF86XK_AudioMute,   spawn,          {.v = mutecmd } },
+    { 0,                   XF86XK_AudioMute,   spawn,          {.v = volnotifcmd } },
     { 0,            XF86XK_AudioLowerVolume,   spawn,          {.v = voldowncmd } },
-    { 0,            XF86XK_AudioLowerVolume,   spawn,          {.v = voldowncmd } },
+    { 0,            XF86XK_AudioLowerVolume,   spawn,          {.v = volnotifcmd } },
     { 0,            XF86XK_AudioRaiseVolume,   spawn,          {.v = volupcmd } },
-    { 0,            XF86XK_AudioRaiseVolume,   spawn,          {.v = volupcmd } },
+    { 0,            XF86XK_AudioRaiseVolume,   spawn,          {.v = volnotifcmd } },
 
     // Window manager
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
