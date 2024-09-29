@@ -86,7 +86,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", bg0, "-nf", fg1, "-sb", yellow, "-sf", bg0, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
-static const char *volnotifcmd[] = { "~/.config/bin/volume-notification", NULL };
+static const char *volnotifcmd[] = { "volume-notification", NULL };
 
 // Volume
 static const char *mutecmd[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
